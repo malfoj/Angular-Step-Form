@@ -1,40 +1,40 @@
-(function(){
-	'use strict'
-	angular.module("example", [])
-	
-	.controller("exampleController", function($scope){
-	$scope.welcome = "Step form example";
-	$scope.data = [
-						{
-                                        type: 'i',
-                                        placeholder: 'Name',
-                                        name: 'name',
-                                        value: '',
-                                        required: true
+(function () {
+    'use strict'
+    angular.module("example", [])
 
-                                    },
-                                    {
-                                        type: 's',
-                                        placeholder: 'Example Select',
-                                        multiple : true,
-                                        name: 'query type',
-                                        value: '',
-                                        options: [
-                                            "Option 1",
-                                            "Option 2",
-                                        ],
-                                        required: true
-                                    },
-                                    {
-                                        type: 't',
-                                        placeholder: 'Message',
-                                        name: 'message',
-                                        value: '',
-                                        required: true
-                                    }
-						
-                        ];
-	
-	});
+            .controller("exampleController", function ($scope) {
+                $scope.welcome = "Step form example";
+                $scope.data = [
+                    {
+                        type: 'i',
+                        placeholder: 'Name',
+                        name: 'name',
+                        value: '',
+                        required: true
+
+                    },
+                    {
+                        type: 's',
+                        placeholder: 'Example Select',
+                        multiple: true,
+                        name: 'query type',
+                        value: '',
+                        options: [
+                            "Option 1",
+                            "Option 2",
+                        ],
+                        required: true
+                    },
+                    {
+                        type: 't',
+                        placeholder: 'Message',
+                        name: 'message',
+                        value: '',
+                        required: true
+                    }
+
+                ];
+
+            });
 
 })();

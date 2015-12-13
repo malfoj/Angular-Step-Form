@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Angular-step-form by malfoj</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Angular-step-form</h1>
-      <h2 class="project-tagline">angular, form, step, javascript</h2>
-      <a href="https://github.com/malfoj/Angular-Step-Form" class="btn">View on GitHub</a>
-      <a href="https://github.com/malfoj/Angular-Step-Form/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/malfoj/Angular-Step-Form/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <head>
+        <meta charset="UTF-8">
+        <title>Angular-step-form by malfoj</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    </head>
+    <body>
+        <section class="page-header">
+            <h1 class="project-name">Angular-step-form</h1>
+            <h2 class="project-tagline">angular, form, step, javascript</h2>
+            <a href="https://github.com/malfoj/Angular-Step-Form" class="btn">View on GitHub</a>
+            <a href="https://github.com/malfoj/Angular-Step-Form/zipball/master" class="btn">Download .zip</a>
+            <a href="https://github.com/malfoj/Angular-Step-Form/tarball/master" class="btn">Download .tar.gz</a>
+        </section>
 
-    <section class="main-content">
-      <h1>
-<a id="angular-step-form" class="anchor" href="#angular-step-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Step-Form</h1>
+        <section class="main-content">
+            <h1>
+                <a id="angular-step-form" class="anchor" href="#angular-step-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Step-Form</h1>
 
-<p>Hello this is my first project @ github.</p>
+            <p>Hello this is my first project @ github.</p>
 
-<p>Contact form / register form with one step at the time.</p>
+            <p>Contact form / register form with one step at the time.</p>
 
-<p>Any suggestions would be pleased.</p>
+            <p>Any suggestions would be pleased.</p>
 
-<p>Example included</p>
+            <p>Example included</p>
 
-<h2>Example Below</h2>
-<iframe src="example/example.html" width="100%" height="500px"></iframe>
+            <h2>Example Below</h2>
+            <iframe src="example/example.html" width="100%" height="500px"></iframe>
 
 
-<h3>Example data provided to the directive which will generate the step form for You</h3>
-<code>
-$scope.data = [
-						{
-                                        type: 'i',
-                                        placeholder: 'Name',
-                                        name: 'name',
-                                        value: '',
-                                        required: true
+            <h3>Javascript example data:</h3>
+            <p>Type: array of objects</p>
+            <p>Possible generated items: input[type="text"], select, textarea</p>
+            <code>
+                <xmp>
+                    [
+                    {
+                    type: 'i',
+                    placeholder: 'Name',
+                    name: 'name',
+                    value: '',
+                    required: true
 
-                                    },
-                                    {
-                                        type: 's',
-                                        placeholder: 'Example Select',
-                                        multiple : true,
-                                        name: 'query type',
-                                        value: '',
-                                        options: [
-                                            "Option 1",
-                                            "Option 2",
-                                        ],
-                                        required: true
-                                    },
-                                    {
-                                        type: 't',
-                                        placeholder: 'Message',
-                                        name: 'message',
-                                        value: '',
-                                        required: true
-                                    }
-						
-                        ];
-	
-	});
-</code>
+                    },
+                    {
+                    type: 's',
+                    placeholder: 'Example Select',
+                    multiple : true,
+                    name: 'query type',
+                    value: '',
+                    options: [
+                    "Option 1",
+                    "Option 2",
+                    ],
+                    required: true
+                    },
+                    {
+                    type: 't',
+                    placeholder: 'Message',
+                    name: 'message',
+                    value: '',
+                    required: true
+                    }
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/malfoj/Angular-Step-Form">Angular-step-form</a> is maintained by <a href="https://github.com/malfoj">malfoj</a>.</span>
+                    ];
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+                    });
+                </xmp>
+            </code>
 
-    </section>
+            <p>Then assign the above data to Your scope and use it</p>
+            <code>
+                <xmp>
+                    <step-form data-par-model="data"></step-form>
+                </xmp>
+            </code>
+            <footer class="site-footer">
+                <span class="site-footer-owner"><a href="https://github.com/malfoj/Angular-Step-Form">Angular-step-form</a> is maintained by <a href="https://github.com/malfoj">malfoj</a>.</span>
 
-  
-  </body>
+                <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+            </footer>
+
+        </section>
+
+
+    </body>
 </html>
