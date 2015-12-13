@@ -31,7 +31,7 @@ angular
                         // some validation might go here
                         if (model.required == true) {
                             //validation goes here
-                            if (model.value.length < 1) {
+                            if (!model.value) {
                                 $scope.error = 'Please fill field: ' + model.placeholder + '.';
                                 return true;
                             }
