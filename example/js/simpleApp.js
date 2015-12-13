@@ -3,7 +3,7 @@
 	angular.module("example", [])
 	
 	.controller("exampleController", function($scope){
-	$scope.welcome = "Welcome in Example Controller Scope";
+	$scope.welcome = "Step form example";
 	$scope.data = [
 						{
                                         type: 'i',

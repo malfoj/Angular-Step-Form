@@ -30,7 +30,45 @@
 
 <p>Example included</p>
 
+<h2>Example Below</h2>
 <iframe src="example/example.html" width="100%" height="500px"></iframe>
+
+
+<h3>Example data provided to the directive which will generate the step form for You</h3>
+<code>
+$scope.data = [
+						{
+                                        type: 'i',
+                                        placeholder: 'Name',
+                                        name: 'name',
+                                        value: '',
+                                        required: true
+
+                                    },
+                                    {
+                                        type: 's',
+                                        placeholder: 'Example Select',
+                                        multiple : true,
+                                        name: 'query type',
+                                        value: '',
+                                        options: [
+                                            "Option 1",
+                                            "Option 2",
+                                        ],
+                                        required: true
+                                    },
+                                    {
+                                        type: 't',
+                                        placeholder: 'Message',
+                                        name: 'message',
+                                        value: '',
+                                        required: true
+                                    }
+						
+                        ];
+	
+	});
+</code>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/malfoj/Angular-Step-Form">Angular-step-form</a> is maintained by <a href="https://github.com/malfoj">malfoj</a>.</span>
