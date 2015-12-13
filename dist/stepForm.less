@@ -1,0 +1,94 @@
+@paddingEditableFields: 10px;
+@fontSize: 12px;
+@formBorderAndFill: #34B1E2;
+@darkBlue: #014C6C;
+@placeholder: #34B1E2;
+@inputBorder: 1px solid #000;
+@additionalBtnBorder: 1px dotted #000;
+@mainBtn: #024D6D;
+
+.placeHolders(){
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    @placeholder;
+        font-style: italic;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    @placeholder;
+        opacity:  1;
+        font-style: italic;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    @placeholder;
+        opacity:  1;
+        font-style: italic;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    @placeholder;
+        font-style: italic;
+    }
+}
+
+.editableFields() {
+    width: 100%;
+    padding: @paddingEditableFields;        
+    border: @inputBorder;
+    background: #fff;
+    color: @darkBlue;
+}
+
+
+.stepForm {
+    font-size: @fontSize;
+    background: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    .step { 
+        font-size: 10px;
+        text-align: right;
+    }
+    .stepBtn {
+        padding: 9px 20px 6px;        
+        margin-top: 5px;
+        cursor: pointer;
+        &.main {
+
+            background-color: @mainBtn;
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                border: 1px solid @mainBtn;
+                color: @mainBtn;
+            }
+        }
+        &.additional {
+            background-color: #fff;
+            border: @additionalBtnBorder;
+            color: #000;
+        }
+        &.main + additional {            
+            margin-right: 10px;
+        } 
+    }
+    .link {
+        color: @placeholder;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+} 
+.stepWrapper {
+    input {
+        .editableFields();
+        .placeHolders();
+    }
+    textarea{
+        resize: none; 
+        .editableFields();
+        .placeHolders();
+    }
+    select {
+        .editableFields();
+    }
+}
