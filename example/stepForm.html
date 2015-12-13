@@ -1,0 +1,47 @@
+<div class="stepForm">
+    <div class="alert alert-danger" role="alert" data-ng-if="error">
+        <button type="button" class="close"  data-ng-click="closeError()"  aria-label="Close"><span  aria-hidden="true">&times;</span></button>
+        {{error}}
+    </div>
+    <div class="">    
+        <div class="step">Step {{current.step + 1}} of {{parModel.length + 1}}</div>    
+    </div>
+
+    <div class="stepWrapper" data-ng-repeat="item in parModel" data-step="{{$index + 1}}" 
+         data-ng-if="current.step === $index">
+
+
+
+        <label>{{item.placeholder}}</label>
+        <div class="editable">
+            <input class="stepFill"  data-ng-keyup="enter($event, item)"  data-ng-if="item.type === 'i'" 
+                   data-ng-model="item.value" data-my-enter="checkStep(item)" name="{{item.name}}" placeholder="{{item.placeholder}}">
+
+
+            <select class="stepFill"  data-ng-if="item.type === 's'" data-ng-model="item.value" 
+                    data-ng-keyup="enter($event, item)" data-ng-options="o as o for o in item.options">
+                <option value="">{{item.placeholder}}</option>
+            </select>
+
+            <textarea class="stepFill"  data-ng-if="item.type === 't'" 
+                      data-ng-model="item.value" name="{{item.name}}" placeholder="{{item.placeholder}}">
+            </textarea>
+        </div>
+        <div class="clearfix" data-ng-if="!final"> 
+            <span class="stepBtn pull-left additional" data-ng-click="stepBack()">Back</span>
+            <span class="stepBtn pull-right main" data-ng-if="item.required || (!item.required && item.value.length > 0)" data-ng-click="checkStep(item)">Next</span>
+            <span class="stepBtn pull-right additional" data-ng-if="!item.required && item.value.length === 0" data-ng-click="skip($index)"> ( Skip ) </span>
+        </div>
+        <div class="clearfix" data-ng-if="final">
+            <span class="stepBtn pull-right main" data-ng-click="goFinal(item)">Done</span>
+        </div>
+    </div>
+
+
+
+    <div class="sendIt" data-ng-if="current.step === parModel.length">
+        <div>Your filled form:</div>
+        <div data-ng-repeat="item in parModel">{{item.placeholder}}: {{item.value}} <span class="link" data-ng-click="editStep($index)"><small>Edit</small></span></div>
+        <button class="stepBtn pull-right additional" data-ng-click="submitAction()"> Send </button>
+    </div>
+</div>
