@@ -1,0 +1,107 @@
+.stepForm {
+  font-size: 12px;
+  background: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.stepForm .step {
+  font-size: 10px;
+  text-align: right;
+}
+.stepForm .stepBtn {
+  padding: 9px 20px 6px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.stepForm .stepBtn.main {
+  background-color: #024D6D;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.stepForm .stepBtn.main:hover {
+  background-color: #fff;
+  border: 1px solid #024D6D;
+  color: #024D6D;
+}
+.stepForm .stepBtn.additional {
+  background-color: #fff;
+  border: 1px dotted #000;
+  color: #000;
+}
+.stepForm .stepBtn.main + additional {
+  margin-right: 10px;
+}
+.stepForm .link {
+  color: #34B1E2;
+  cursor: pointer;
+}
+.stepForm .link:hover {
+  text-decoration: underline;
+}
+.stepWrapper input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #014C6C;
+}
+.stepWrapper input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #34B1E2;
+  font-style: italic;
+}
+.stepWrapper input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #34B1E2;
+  opacity: 1;
+  font-style: italic;
+}
+.stepWrapper input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #34B1E2;
+  opacity: 1;
+  font-style: italic;
+}
+.stepWrapper input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #34B1E2;
+  font-style: italic;
+}
+.stepWrapper textarea {
+  resize: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #014C6C;
+}
+.stepWrapper textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #34B1E2;
+  font-style: italic;
+}
+.stepWrapper textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #34B1E2;
+  opacity: 1;
+  font-style: italic;
+}
+.stepWrapper textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #34B1E2;
+  opacity: 1;
+  font-style: italic;
+}
+.stepWrapper textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #34B1E2;
+  font-style: italic;
+}
+.stepWrapper select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #014C6C;
+}
+/*# sourceMappingURL=stepForm.css.map */
